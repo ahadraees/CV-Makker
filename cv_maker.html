@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    
+</style>
+<body>
+    <div  class="logo" id="logo">
+        <img id="logo_img" src="cv_logo.png" alt="">
+    </div>
+    <form id="cv-form">
+        <h1 class="form-head">Fill All Field As Per Your Requirement</h1>
+        <!---Name-->
+        <label for="">Uploade Your Clear Image</label>
+        <input type="file" name="" id="img" accept="image/*">
+        <label for="">Your Name</label>
+        <input type="text" name="" id="name" placeholder="Enter Your Name eg:Abdul Ahad">
+        <!-- Passion -->
+        <label for="">Your Passion</label>
+        <input type="text" name="" id="Passion" placeholder="Enter Your Passion eg:Software Engineer">
+        <!-- summary -->
+        <label for="">Your Summary</label>
+        <textarea name="" id="summary" placeholder="Enter Your Summary"></textarea>
+        <!-- Experience -->
+        <label for="">Your Experience</label>
+        <input type="text" name="" id="Experience1" placeholder="Enter Your Experience">
+        <p>more? Fill More</p>
+        <input type="text" name="" id="Experience2" placeholder="Enter Your Experience">
+        <input type="text" name="" id="Experience3" placeholder="Enter Your Experience">
+        <input type="text" name="" id="Experience4" placeholder="Enter Your Experience">
+        <!-- education -->
+        <label for="">Your Education</label>
+        <input type="text" name="" id="Eduction_matric" placeholder="Enter Your Matric School">
+        <input type="text" name="" id="Eduction_college" placeholder="Enter Your college">
+        <input type="text" name="" id="Eduction_uni" placeholder="Enter Your university / institute">
+
+        <!-- certificate -->
+        <label for="">Your certificate</label>
+        <input type="text" name="" id="certificate" placeholder="Enter Your certificate">
+        <!-- skills -->
+        <label for="">Your skills</label>
+        <input type="text" name="" id="skill1" placeholder="Enter Your skills eg:html">
+        <input type="text" name="" id="skill2" placeholder="Enter Your skills eg:css">
+        <input type="text" name="" id="skill3" placeholder="Enter Your skills eg:javascript">
+        <input type="text" name="" id="skill4" placeholder="Enter Your skills eg:bootstrap">
+        <input type="text" name="" id="skill5" placeholder="Enter Your skills eg:Php">
+        <input type="text" name="" id="skill6" placeholder="Enter Your skills eg:Mysql">
+        <!-- refference -->
+        <label for="">Your Refference</label>
+        <input type="text" name="" id="ref" placeholder="Enter Refference eg:Availbe Upon Your Request">
+
+        <div class="btn">
+            <button type="submit">
+              Generate CV
+            </button>
+    </form>
+</body>
+<script>
+    document.getElementById('cv-form').addEventListener('submit' , function(event) {
+        event.preventDefault();
+        var img = document.getElementById("img").src;
+        var name = document.getElementById("name").value;
+        var Passion = document.getElementById("Passion").value;
+        var summary = document.getElementById("summary").value;
+        var Experience1 = document.getElementById("Experience1").value;
+        var Experience2 = document.getElementById("Experience2").value;
+        var Experience3 = document.getElementById("Experience3").value;
+        var Experience4 = document.getElementById("Experience4").value;
+        var Eduction_matric = document.getElementById("Eduction_matric").value;
+        var Eduction_college = document.getElementById("Eduction_college").value;
+        var Eduction_uni = document.getElementById("Eduction_uni").value;
+        var certificate = document.getElementById("certificate").value;
+        var skill1 = document.getElementById("skill1").value;
+        var skill2 = document.getElementById("skill2").value;
+        var skill3 = document.getElementById("skill3").value;
+        var skill4 = document.getElementById("skill4").value;
+        var skill5 = document.getElementById("skill5").value;
+        var skill6 = document.getElementById("skill6").value;
+        var ref = document.getElementById("ref").value;
+
+
+        sessionStorage.setItem("img" , img);
+        sessionStorage.setItem("name" , name);
+        sessionStorage.setItem("Passion" , Passion);
+        sessionStorage.setItem("summary" , summary);
+        sessionStorage.setItem("Experience1" , Experience1);
+        sessionStorage.setItem("Experience2" , Experience2);
+        sessionStorage.setItem("Experience3" , Experience3);
+        sessionStorage.setItem("Experience4" , Experience4);
+        sessionStorage.setItem("Eduction_matric" , Eduction_matric);
+        sessionStorage.setItem("Eduction_college" , Eduction_college);
+        sessionStorage.setItem("Eduction_uni" , Eduction_uni);
+        sessionStorage.setItem("certificate" , certificate);
+        sessionStorage.setItem("skill1" , skill1);
+        sessionStorage.setItem("skill2" , skill2);
+        sessionStorage.setItem("skill3" , skill3);
+        sessionStorage.setItem("skill4" , skill4);
+        sessionStorage.setItem("skill5" , skill5);
+        sessionStorage.setItem("skill6" , skill6);
+        sessionStorage.setItem("ref" , ref);
+
+        window.location.href = "show_cv.html";
+    });
+</script>
+</html>

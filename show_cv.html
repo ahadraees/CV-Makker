@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show CV</title>
+    <style>
+        .show-cv {
+            width: 800px;
+            margin: auto;
+            height: auto;
+            border: 1px solid black;
+            background-color: black;
+            padding: 20px;
+        }
+        h2 {
+            font-size: 35px;
+            
+            color: white;
+        }
+        p {
+           font-size: 18px;
+        
+            color: rgb(255, 191, 0);
+        }
+        #name {
+            color: rgb(255, 191, 0);
+        }
+        .skk{
+            list-style: circle;
+        }
+        img{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 800px) {
+            .show-cv {
+                width: 90%;
+                padding: 15px;
+            }
+            h2 {
+                font-size: 28px;
+            }
+            p {
+                font-size: 16px;
+            }
+            img {
+                width: 150px;
+                height: 150px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            h2 {
+                font-size: 24px;
+            }
+            p {
+                font-size: 14px;
+            }
+            img {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="show-cv" id="show-cv">
+        <img src="" id="img" alt="">
+        <h2 id="name"></h2>
+        <h2 id="Passion"></h2>
+        <h2>Summary</h2>
+        <p id="summary_con"></p>
+        <h2>Experience</h2>
+        <p id="exp1"></p>
+        <p id="exp2"></p>
+        <p id="exp3"></p>
+        <p id="exp4"></p>
+        <h2>Education</h2>
+        <p id="matric"></p>
+        <p id="college"></p>
+        <p id="university"></p>
+        <h2>Certificate</h2>
+        <p id="cer-con"></p>
+        <h2>Skills</h2>
+        <p class="skk" id="skill1"></p>
+        <p id="skill2" class="skk"></p>
+        <p id="skill3" class="skk"></p>
+        <p id="skill4" class="skk"></p>
+        <p id="skill5" class="skk"></p>
+        <p id="skill6" class="skk"></p>
+        <h2>Reference</h2>
+        <p id="ref-con"></p>
+    </div>
+</body>
+<script>
+    var image = sessionStorage.getItem.src("img");
+    var name = sessionStorage.getItem("name");
+    var Passion = sessionStorage.getItem("Passion");
+    var summary = sessionStorage.getItem("summary");
+    var Experience1 = sessionStorage.getItem("Experience1");
+    var Experience2 = sessionStorage.getItem("Experience2");
+    var Experience3 = sessionStorage.getItem("Experience3");
+    var Experience4 = sessionStorage.getItem("Experience4");
+    var Eduction_matric = sessionStorage.getItem("Eduction_matric");
+    var Eduction_college = sessionStorage.getItem("Eduction_college");
+    var Eduction_uni = sessionStorage.getItem("Eduction_uni");
+    var certificate = sessionStorage.getItem("certificate");
+    var skill1 = sessionStorage.getItem("skill1");
+    var skill2 = sessionStorage.getItem("skill2");
+    var skill3 = sessionStorage.getItem("skill3");
+    var skill4 = sessionStorage.getItem("skill4");
+    var skill5 = sessionStorage.getItem("skill5");
+    var skill6 = sessionStorage.getItem("skill6");
+    var ref = sessionStorage.getItem("ref");
+
+    document.getElementById("img").src = image;
+    document.getElementById("name").textContent = name;
+    document.getElementById("Passion").textContent = Passion;
+    document.getElementById("summary_con").textContent = summary;
+    document.getElementById("exp1").textContent = Experience1;
+    document.getElementById("exp2").textContent = Experience2;
+    document.getElementById("exp3").textContent = Experience3;
+    document.getElementById("exp4").textContent = Experience4;
+    document.getElementById("matric").textContent = Eduction_matric;
+    document.getElementById("college").textContent = Eduction_college;
+    document.getElementById("university").textContent = Eduction_uni;
+    document.getElementById("cer-con").textContent = certificate;
+    document.getElementById("skill1").textContent = skill1;
+    document.getElementById("skill2").textContent = skill2;
+    document.getElementById("skill3").textContent = skill3;
+    document.getElementById("skill4").textContent = skill4;
+    document.getElementById("skill5").textContent = skill5;
+    document.getElementById("skill6").textContent = skill6;
+    document.getElementById("ref-con").textContent = ref;
+</script>
+</html>
